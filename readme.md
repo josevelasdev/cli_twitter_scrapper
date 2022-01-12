@@ -13,7 +13,7 @@ following you need to execute `npm start`
 
 In the terminal you will see the next prompt:
 
-![CLI Scrapper](/assets/img/capture.png)
+![CLI Scrapper](assets/img/capture.png)
 
 # Requirements
 
