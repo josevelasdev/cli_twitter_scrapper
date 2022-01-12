@@ -13,7 +13,7 @@ following you need to execute `npm start`
 
 In the terminal you will see the next prompt:
 
-![CLI Scrapper](assets/capture.png)
+![CLI Scrapper](https://raw.githubusercontent.com/josevelasdev/cli_twitter_scrapper/main/assets/Capture.PNG)
 
 # Requirements
 
