@@ -10,10 +10,31 @@ import { getDataByParameterTwitter } from "./lib/inquirer.mjs";
 import { authenticateClient, getDataTwitterByQuery } from "./lib/fetch.mjs";
 
 const getDataByParameterTwitterRsp = async () => {
-  const query_twt = await getDataByParameterTwitter();
-  const token = await authenticateClient();
-  const response = await getDataTwitterByQuery(token, query_twt);
-  createCSV(response);
+  // const token = await authenticateClient();
+  try {
+    const query_twt = await getDataByParameterTwitter();
+    const response = await getDataTwitterByQuery(query_twt);
+    if (response){
+      createCSV(response);
+      console.log(
+        chalk.yellow(
+          figlet.textSync("complete!", {
+            horizontalLayout: "full",
+          })
+        )
+      );
+    } 
+  } catch (error) {
+    console.log(
+      chalk.red(
+        figlet.textSync('error in app', {
+          verticalLayout: "default",
+          width: 80,
+        })
+      )
+    );
+    // getDataByParameterTwitterRsp();
+  }
 };
 
 clear();
